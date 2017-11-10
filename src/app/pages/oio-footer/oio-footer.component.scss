@@ -1,0 +1,75 @@
+footer {
+    background-color: grey;
+    opacity: .5;
+}
+.hover-style {
+    font-weight: 700;
+    background: no-repeat;
+    background-size: contain;
+    background-position: center; 
+}
+.no-highlight {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;    
+}
+.social-media-hovers {
+    .facebook:hover {
+        background-image: url('../../../assets/img/facebook.svg');
+        color: rgb(204, 16, 166);
+        @extend .hover-style;
+    }
+    .twitter:hover {
+        background-image: url('../../../assets/img/twitter.png');
+        color: rgb(228, 177, 38);
+        @extend .hover-style;
+    }
+    .snapchat:hover {
+        background-image: url('../../../assets/img/snapchat.jpg');
+        color: rgb(121, 41, 9);
+        @extend .hover-style;
+    }
+    .instagram:hover {
+        background-image: url('../../../assets/img/instagram.png');
+        color: rgb(71, 198, 214);
+        @extend .hover-style;
+    }
+    .bandcamp:hover {
+        background-image: url('../../../assets/img/bandcamp.png');
+        color: rgb(223, 23, 23);
+        @extend .hover-style;
+    }
+    .soundcloud:hover {
+        background-image: url('../../../assets/img/soundcloud.svg');
+        color: rgb(121, 41, 9);
+        @extend .hover-style;
+    }
+}
+.common-footer-span {
+    color: white;
+    font-family: sans-serif;
+    font-weight: 100;
+    padding: 2em;
+    text-decoration: none;
+    text-align: center;
+    @extend .no-highlight;
+}
+
+.non-mobile { 
+    @extend .social-media-hovers;
+    a, span {
+        @extend .common-footer-span;
+        font-size: 1.5em;
+    }
+}
+.mobile {
+    @extend .social-media-hovers;
+    a, span {
+        @extend .common-footer-span;
+        font-size: 1.2em;
+    }
+}
