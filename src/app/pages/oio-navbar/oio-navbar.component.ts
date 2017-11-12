@@ -6,7 +6,7 @@ import { Component, OnInit, ElementRef, ViewChildren } from '@angular/core';
   styleUrls: ['./oio-navbar.component.scss']
 })
 export class OioNavbarComponent implements OnInit {
-  private navbarItems: Array<string> = ['About','Shows','Music','Artwork','Merch'];
+  navbarItems: Array<string> = ['About','Shows','Music','Artwork','Merch'];
   constructor(private elementRef: ElementRef) { }
 
   ngOnInit() {
