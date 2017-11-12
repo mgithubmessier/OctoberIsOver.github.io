@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChildren } from '@angular/core';
 
 @Component({
   selector: 'oio-navbar',
@@ -6,12 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./oio-navbar.component.scss']
 })
 export class OioNavbarComponent implements OnInit {
-
-  constructor() { }
+  private navbarItems: Array<string> = ['About','Shows','Music','Artwork','Merch'];
+  constructor(private elementRef: ElementRef) { }
 
   ngOnInit() {
   }
-  onclick(source: string) {
-    console.log(source);
+  onClick(event, navbarItem: string) {
+    let navbarElements: Array<HTMLElement> = Array.prototype.slice.call(this.elementRef.nativeElement.getElementsByTagName('span'));;
+    navbarElements.forEach((navbarElement) => {
+      navbarElement.classList.remove('selected');
+      navbarElement.classList.add('unselected');
+    });
+    event.srcElement.classList.remove('unselected');
+    event.srcElement.classList.add('selected');
   }
 }

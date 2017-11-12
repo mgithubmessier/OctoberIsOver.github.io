@@ -1,6 +1,5 @@
 div {
-    background-color: grey;
-    opacity: .5;
+    background-color: rgba(128, 128, 128, .5);
 }
 .no-highlight {
     -webkit-touch-callout: none;
@@ -15,19 +14,25 @@ div {
     color: white;
     font-family: sans-serif;
     font-weight: 100;
-    font-size: 2em;
+    font-size: 3em;
     text-align: center;
+    width: 100%;
 }
 .non-mobile span {
-    padding: 2em;
+    padding: .5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
     @extend .navbar-span;
     @extend .no-highlight;
 }
 .mobile span {
-    padding: 1em;
+    padding: .5em;
     @extend .navbar-span;
     @extend .no-highlight;
 }
-div>span:hover {
-    background-color: rgb(65, 10, 10);    
+.unselected:hover {
+    background-color: rgba(65, 10, 10, .5);
+}
+.selected {
+    background-color: rgb(65, 10, 10);        
 }
