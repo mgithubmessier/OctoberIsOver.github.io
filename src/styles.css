@@ -1,4 +1,9 @@
 html, body, .full-height {
     cursor: default;
     margin: 0;
+    background-image: url('assets/img/background.jpg');
+    background-size:cover;
+    background-position: center; 
+    height: 100vh;
+    background-attachment:fixed;
 }

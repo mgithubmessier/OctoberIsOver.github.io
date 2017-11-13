@@ -13,6 +13,7 @@ class SocialMedia {
   styleUrls: ['./oio-footer.component.scss']
 })
 export class OioFooterComponent implements OnInit {
+  sanitizer: Sanitizer;
   socialMedias: Array<SocialMedia> = [
     { 
       name: 'Facebook', 
@@ -34,7 +35,9 @@ export class OioFooterComponent implements OnInit {
     }
   ];
 
-  constructor(private sanitizer: Sanitizer) { }
+  constructor(sanitizer: Sanitizer) { 
+    this.sanitizer = sanitizer;
+  }
 
   ngOnInit() {
   }

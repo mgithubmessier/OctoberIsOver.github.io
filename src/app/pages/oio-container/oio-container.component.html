@@ -1,6 +1,9 @@
 <div class="full-height" fxLayout="column">
     <oio-header fxFlex="4 1 auto"></oio-header>
-    <oio-navbar fxFlex="1 1 auto"></oio-navbar>
-    <!-- <ng-template oio-body fxFlex="4 1 auto"></ng-template> -->
+    <oio-navbar fxFlex="1 1 auto" (navbarItemEmitter)="navbarItemEmitted($event)"></oio-navbar>
+    <!-- <ng-template oio-body="SoundcloudComponent"></ng-template> -->
+    <oio-body *ngIf="navbarItem === 'Music'">
+        <app-soundcloud [songName]="'EP'"></app-soundcloud>
+    </oio-body>
     <oio-footer fxFlex="1 1 auto"></oio-footer>
 </div>
