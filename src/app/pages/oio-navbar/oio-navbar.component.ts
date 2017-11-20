@@ -7,10 +7,10 @@ import { Event } from '../oio-models/event';
   styleUrls: ['./oio-navbar.component.scss'],
   animations: [
     trigger('headerTrigger', [
-      state('untouched', style({ top: '500px', position: 'relative' })),
-      state('shrink', style({ top: '0px', transform: 'scale(1)' })),
-      state('expand', style({ top: '0px', transform: 'scale(1.05)' })),
-      transition('shrink <=> expand', [animate(200)])
+      state('untouched', style({ top: '30vh', position: 'relative' })),
+      state('touched', style({ top: '0px', transform: 'scale(1)' })),
+
+      transition('untouched => touched', [animate(100)])
     ])
   ]
 })
@@ -21,14 +21,12 @@ export class OioNavbarComponent implements OnInit {
   constructor(private elementRef: ElementRef) { }
   ngOnInit() {
   }
-  mouseEnter() {
-    this.headerState = 'expand';    
-  }
-  mouseLeave() {
-    this.headerState = 'shrink';
-  }
   onClick(event, navbarItem: string) {
+    this.headerState = 'touched';    
     let eventSource = event.target || event.srcElement;
+
+    /** @todo change how you are accessing the elements inside of this nav */
+    /** @todo change how you are adding and removing classes from them */
     let navbarElements: Array<HTMLElement> = Array.prototype.slice.call(this.elementRef.nativeElement.getElementsByTagName('span'));;
     navbarElements.forEach((navbarElement) => {
       navbarElement.classList.remove('selected');
