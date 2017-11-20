@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewChild, ComponentFactoryResolver, ComponentFactory, Input, Type } from '@angular/core';
+import { Event } from '../oio-models/event';
+import { SocialMedia } from '../oio-models/social-medias';
 
 @Component({
   selector: 'oio-container',
@@ -6,10 +8,14 @@ import { Component, OnInit, ViewChild, ComponentFactoryResolver, ComponentFactor
   styleUrls: ['./oio-container.component.scss']
 })
 export class OioContainerComponent implements OnInit {
-  navbarItem: string;
+  event: Event;
+  selectedSocialMediaName: string;
   constructor(private componentFactoryResolver: ComponentFactoryResolver) {  }
-  navbarItemEmitted(event) {
-    this.navbarItem = event.navbarItem;
+  handler(event: Event) {
+    this.event = event;
+    if(this.event.eventType === 'footer') {
+      this.selectedSocialMediaName = this.event.name;
+    }
   }
   ngOnInit() {
   }

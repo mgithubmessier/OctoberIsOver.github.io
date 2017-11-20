@@ -1,3 +1,7 @@
+:host {
+    z-index: 100;
+    margin-top: 1em;
+}
 div {
     background-color: rgba(128, 128, 128, .5);
 }
@@ -14,19 +18,12 @@ div {
     color: white;
     font-family: sans-serif;
     font-weight: 100;
-    font-size: 3em;
+    font-size: 4em;
+    height: 150px;
     text-align: center;
     width: 100%;
 }
-.non-mobile span {
-    padding: .5em;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    @extend .navbar-span;
-    @extend .no-highlight;
-}
-.mobile span {
-    padding: .5em;
+span {
     @extend .navbar-span;
     @extend .no-highlight;
 }

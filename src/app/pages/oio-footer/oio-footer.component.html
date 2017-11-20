@@ -1,6 +1,5 @@
-<footer fxLayoutAlign="space-around center center">
+<footer fxLayoutAlign="space-around center center" fxFlexFill>
     <span [ngClass]="socialMedia.class" *ngFor="let socialMedia of socialMedias" fxLayoutAlign="center center" (click)="onClick($event, socialMedia.name)">
-      <img [src]="socialMedia.img">
-      <span [innerHTML]="this.sanitizer.bypassSecurityTrustHtml(socialMedia.widget)"></span>
+      <img [src]="socialMedia.img" [@footerItemTrigger]="">
     </span>
 </footer>

@@ -7,7 +7,7 @@ export class SoundcloudSong {
 }
 
 @Component({
-  selector: 'app-soundcloud',
+  selector: 'soundcloud',
   templateUrl: './soundcloud.component.html',
   styleUrls: ['./soundcloud.component.scss'],
   animations: []

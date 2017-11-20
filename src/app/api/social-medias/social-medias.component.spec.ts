@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OioHeaderComponent } from './oio-header.component';
+import { SocialMediasComponent } from './social-medias.component';
 
-describe('OioHeaderComponent', () => {
-  let component: OioHeaderComponent;
-  let fixture: ComponentFixture<OioHeaderComponent>;
+describe('SocialMediasComponent', () => {
+  let component: SocialMediasComponent;
+  let fixture: ComponentFixture<SocialMediasComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ OioHeaderComponent ]
+      declarations: [ SocialMediasComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(OioHeaderComponent);
+    fixture = TestBed.createComponent(SocialMediasComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

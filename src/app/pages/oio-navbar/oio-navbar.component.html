@@ -1,3 +1,3 @@
-<div ngClass.gt-sm="non-mobile" ngClass.lt-md="mobile"  fxLayout.gt-sm="row" fxLayoutAlign="space-around center center" fxLayout.lt-md="column">
-    <span *ngFor="let navbarItem of navbarItems" (click)="onClick($event, navbarItem)" [textContent]="navbarItem" class="unselected"></span>
+<div [@headerTrigger]="headerState" (mouseenter)="mouseEnter()" (mouseleave)="mouseLeave()"  fxLayout.gt-sm="row" fxLayoutAlign="space-around center center" fxLayout.lt-md="column">
+    <span *ngFor="let navbarItem of navbarItems"  (click)="onClick($event, navbarItem)" [textContent]="navbarItem" class="unselected" fxLayoutAlign="space-around center center"></span>
 </div>

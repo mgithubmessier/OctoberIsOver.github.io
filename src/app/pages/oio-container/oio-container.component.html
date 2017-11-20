@@ -1,9 +1,8 @@
 <div class="full-height" fxLayout="column">
-    <oio-header fxFlex="4 1 auto"></oio-header>
-    <oio-navbar fxFlex="1 1 auto" (navbarItemEmitter)="navbarItemEmitted($event)"></oio-navbar>
-    <!-- <ng-template oio-body="SoundcloudComponent"></ng-template> -->
-    <oio-body *ngIf="navbarItem === 'Music'">
-        <app-soundcloud [songName]="'EP'"></app-soundcloud>
+    <oio-navbar fxFlex="1 1 auto" (navbarItemEmitter)="handler($event)"></oio-navbar>
+    <oio-body fxFlex="4 1 auto" fxLayoutAlign="center center">
+        <soundcloud fxFlexFill fxLayoutAlign="center center" *ngIf="event?.name === 'Music'" [songName]="'EP'"></soundcloud>
+        <social-medias fxFlexFill fxLayoutAlign="center center" *ngIf="event?.eventType === 'footer'" [selected]="selectedSocialMediaName"></social-medias>
     </oio-body>
-    <oio-footer fxFlex="1 1 auto"></oio-footer>
+    <oio-footer fxLayoutAlign="center end" fxFlex="1 1 auto" (footerItemEmitter)="handler($event)"></oio-footer>
 </div>
