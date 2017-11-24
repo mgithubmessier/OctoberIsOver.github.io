@@ -67,23 +67,11 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-@angular/core@4.4.6
-MIT
-MIT
-
-@angular/platform-browser@4.4.6
-MIT
-MIT
-
-@angular/common@4.4.6
-MIT
-MIT
-
-@angular/flex-layout@2.0.0-beta.9
+@angular/flex-layout@2.0.0-rc.1
 MIT
 The MIT License
 
-Copyright (c) 2017 Google, Inc.
+Copyright (c) 2016-2017 Google, Inc.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -102,3 +90,19 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
+@angular/core@4.4.6
+MIT
+MIT
+
+@angular/animations@4.4.6
+MIT
+MIT
+
+@angular/platform-browser@4.4.6
+MIT
+MIT
+
+@angular/common@4.4.6
+MIT
+MIT
