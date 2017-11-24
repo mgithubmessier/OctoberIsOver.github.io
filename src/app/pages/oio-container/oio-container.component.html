@@ -1,5 +1,5 @@
 <div class="full-height" fxLayout="column">
-    <oio-navbar fxFlex="1 1 auto" (navbarItemEmitter)="handler($event)"></oio-navbar>
+    <oio-navbar [headerState]="headerState" fxFlex="1 1 auto" (navbarItemEmitter)="handler($event)"></oio-navbar>
     <oio-body fxFlex="4 1 auto" fxLayoutAlign="center center">
         <soundcloud fxFlexFill fxLayoutAlign="center center" *ngIf="event?.name === 'Music'" [songName]="'EP'"></soundcloud>
         <social-medias fxFlexFill fxLayoutAlign="center center" *ngIf="event?.eventType === 'footer'" [selected]="selectedSocialMediaName"></social-medias>

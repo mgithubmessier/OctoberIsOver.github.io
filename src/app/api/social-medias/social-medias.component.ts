@@ -1,6 +1,6 @@
 import { Component, OnInit, OnChanges, AfterViewInit, Sanitizer, Input, NgZone } from '@angular/core';
 import { SocialMediasConstant, SocialMedia,  } from '../../pages/oio-models/social-medias';
-import { Ng4TwitterTimelineService } from 'ng4-twitter-timeline/lib/index';
+import { TwitterTimelineService } from '../twitter-timeline/twitter-timeline.service';
 
 @Component({
   selector: 'social-medias',
@@ -13,7 +13,7 @@ export class SocialMediasComponent implements OnInit, OnChanges {
   selectedSocialMedia: SocialMedia;
   @Input() selected: string;
 
-  constructor(sanitizer: Sanitizer, private ng4TwitterTimelineService: Ng4TwitterTimelineService) { 
+  constructor(sanitizer: Sanitizer, private twitterTimelineService: TwitterTimelineService) { 
     this.sanitizer = sanitizer;
   }
 

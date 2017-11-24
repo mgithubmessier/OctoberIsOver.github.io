@@ -10,11 +10,13 @@ import { SocialMedia } from '../oio-models/social-medias';
 export class OioContainerComponent implements OnInit {
   event: Event;
   selectedSocialMediaName: string;
+  headerState: string = 'untouched';
   constructor(private componentFactoryResolver: ComponentFactoryResolver) {  }
   handler(event: Event) {
     this.event = event;
     if(this.event.eventType === 'footer') {
       this.selectedSocialMediaName = this.event.name;
+      this.headerState = 'touched';
     }
   }
   ngOnInit() {

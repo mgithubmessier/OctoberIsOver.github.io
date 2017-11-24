@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, ViewChildren, EventEmitter, Output } from '@angular/core';
+import { Input, Component, OnInit, ElementRef, ViewChildren, EventEmitter, Output } from '@angular/core';
 import { trigger, style, state, transition, animate } from '@angular/animations';
 import { Event } from '../oio-models/event';
 @Component({
@@ -17,7 +17,7 @@ import { Event } from '../oio-models/event';
 export class OioNavbarComponent implements OnInit {
   @Output() navbarItemEmitter: EventEmitter<Event> = new EventEmitter();
   navbarItems: Array<string> = ['About','Shows','Music','Merch'];
-  private headerState: string = 'untouched'; 
+  @Input() headerState: string = 'untouched'; 
   constructor(private elementRef: ElementRef) { }
   ngOnInit() {
   }
